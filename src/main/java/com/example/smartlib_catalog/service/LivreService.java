@@ -14,10 +14,10 @@ public class LivreService {
     @Autowired
     LivreRepository livreRepository;
 
-
     public Livre save(Livre livre){
         return livreRepository.save(livre);
     }
+
 
     public List<Livre> getAll(){
         return livreRepository.findAll();

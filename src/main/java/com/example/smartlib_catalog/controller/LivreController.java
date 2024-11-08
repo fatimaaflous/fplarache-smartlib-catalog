@@ -42,10 +42,9 @@ public class LivreController {
     LivreService livreService;
 
 
-    @PostMapping
 
     @Operation(
-            summary = "Ajouter Un compte",
+            summary = "Ajouter Un livre",
             requestBody = @RequestBody(
                     required = true,
                     content = @Content(
@@ -65,6 +64,8 @@ public class LivreController {
                     @ApiResponse(responseCode ="500", description = "erreur server")
             }
     )
+    @PostMapping
+
     public ResponseEntity<Livre> save(@RequestBody Livre livre){
 
         return ResponseEntity.ok(livreService.save(livre));
